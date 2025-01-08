@@ -12,7 +12,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-    <Script src="https://assets.adobedtm.com/6a203c8a0ff8/cc2e28cff2ef/launch-7be2e2d66423-development.min.js" strategy="beforeInteractive" />
+    <Script >
+      {`window.targetGlobalSettings = {
+        cookieDomain: "free-nextjs-admin-dashboard-h6echej2s-samircaus-projects.vercel.app/"
+      }`}
+    </Script>
+    <Script src="https://assets.adobedtm.com/6a203c8a0ff8/cc2e28cff2ef/launch-7be2e2d66423-development.js" strategy="afterInteractive" />
       <DefaultLayout>
         <ECommerce />
       </DefaultLayout>
