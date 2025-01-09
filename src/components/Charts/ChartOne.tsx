@@ -3,6 +3,8 @@
 import { ApexOptions } from "apexcharts";
 import React from "react";
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
+import { triggerView} from "@/utils/target"
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -129,6 +131,13 @@ interface ChartOneState {
 }
 
 const ChartOne: React.FC = () => {
+
+  useEffect(() => {
+    console.log("chartOne")
+    triggerView("chartOne")
+  }, []);
+
+  
   const series = [
       {
         name: "Product One",
