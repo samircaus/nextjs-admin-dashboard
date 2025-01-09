@@ -55,7 +55,7 @@ const ChartThree: React.FC = () => {
 
     useEffect(() => {
       console.log("ChartThree")
-      triggerView("chartOne")
+      triggerView("ChartThree")
     }, []);
 
   return (
