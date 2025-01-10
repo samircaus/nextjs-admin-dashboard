@@ -54,7 +54,6 @@ const ChartThree: React.FC = () => {
   const series = [65, 34, 12, 56];
 
     useEffect(() => {
-      console.log("ChartThree")
       triggerView("ChartThree")
     }, []);
 
